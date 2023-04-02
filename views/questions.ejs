@@ -1,0 +1,18 @@
+<h1>List of Questions</h1>
+<ul>
+    <% questions.questions.forEach(function(question) { %>
+        <li>
+            <h3><%= question.content %></h3>
+            <% if (question.image) { %>
+                <img src="<%= question.image %>" alt="Question Image" />
+            <% } %>
+            <ul>
+                <% if (question.options) { %>
+                    <% question.options.forEach(function (option) { %>
+                        <li><%= option.content %></li>
+                    <% }); %>
+                <% } %>
+            </ul>
+        </li>
+    <% }); %>
+</ul>

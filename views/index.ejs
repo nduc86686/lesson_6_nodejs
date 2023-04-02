@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driving Test Questions</title>
+</head>
+<body>
+<h1>Driving Test Questions</h1>
+<ul>
+    <% questions.forEach(function (questionGroup) { %>
+        <% questionGroup.questions.forEach(function (question) { %>
+            <li>
+                <h3><%= question.content %></h3>
+                <ul>
+                    <% if (question.options) { %>
+                        <% question.options.forEach(function (option) { %>
+                            <li><%= option.content %></li>
+                        <% }); %>
+                    <% } %>
+                </ul>
+            </li>
+        <% }); %>
+    <% }); %>
+</ul>
+</body>
+</html>

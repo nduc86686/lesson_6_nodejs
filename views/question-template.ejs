@@ -1,0 +1,10 @@
+<div class="question">
+    <h3><%= question.content %></h3>
+    <ul>
+        <% question.options?.forEach(function(option) { %>
+            <li><%= option.content %></li>
+        <% }); %>
+    </ul>
+
+
+</div>
